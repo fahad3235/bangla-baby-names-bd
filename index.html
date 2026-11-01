@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bangla Baby Names BD</title>
+<meta name="description" content="Offline bilingual baby-name explorer for Bangladesh: search 48 names by meaning, gender, and origin, save favourites, and pick a random name.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <h1>Bangla Baby Names BD</h1>
+    <p data-i18n="tagline">Find a beautiful name, with its meaning, in English and Bangla.</p>
+    <button id="langBtn" type="button">বাংলা</button>
+  </div>
+</header>
+
+<main>
+  <section class="controls" aria-label="Search and filters">
+    <label class="field wide">
+      <span data-i18n="searchLabel">Search names or meanings</span>
+      <input id="search" type="search" data-i18n-ph="searchPlaceholder" placeholder="Try &quot;light&quot;, &quot;joy&quot;, &quot;নূর&quot;...">
+    </label>
+    <label class="field">
+      <span data-i18n="genderLabel">Gender</span>
+      <select id="gender">
+        <option value="all" data-i18n="genderAll">All genders</option>
+        <option value="boy" data-i18n="genderBoy">Boy</option>
+        <option value="girl" data-i18n="genderGirl">Girl</option>
+        <option value="unisex" data-i18n="genderUnisex">Unisex</option>
+      </select>
+    </label>
+    <label class="field">
+      <span data-i18n="originLabel">Origin</span>
+      <select id="origin">
+        <option value="all" data-i18n="originAll">All origins</option>
+      </select>
+    </label>
+    <label class="field">
+      <span data-i18n="sortLabel">Sort</span>
+      <select id="sort">
+        <option value="az" data-i18n="sortAZ">A to Z</option>
+        <option value="za" data-i18n="sortZA">Z to A</option>
+      </select>
+    </label>
+    <label class="check">
+      <input id="favOnly" type="checkbox">
+      <span data-i18n="favOnly">Favourites only</span>
+    </label>
+    <button id="surprise" type="button" class="primary" data-i18n="surprise">Surprise me</button>
+    <button id="clearFilters" type="button" data-i18n="clearFilters">Clear filters</button>
+  </section>
+
+  <p id="count" class="count" aria-live="polite"></p>
+  <p id="empty" class="empty" hidden data-i18n="empty">No names match. Try a different search or clear a filter.</p>
+  <section id="results" class="grid" aria-live="polite"></section>
+
+  <p class="disclaimer" data-i18n="disclaimer">Meanings are commonly given meanings and vary by source; Bangla spellings are common transliterations. This is a browsing reference, not religious or official authority.</p>
+</main>
+
+<dialog id="detail">
+  <div id="detailBody"></div>
+  <button id="detailClose" type="button" data-i18n="close">Close</button>
+</dialog>
+
+<footer data-i18n="footer">Fully offline — no data leaves your device. Favourites are saved in this browser only.</footer>
+
+<script src="js/data.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
